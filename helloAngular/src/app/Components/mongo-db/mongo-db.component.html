@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <b>Name:</b> {{name}}
+        </li>
+        <li>
+            <b>Student_ID:</b> {{id}}
+        </li>
+        <li>
+            <b>Major:</b> {{major}}
+        </li>
+    </ul>
+    <h2>skills</h2>
+
+    <form (submit)="addSkill(skill.value)">
+        <div>
+            <input type="text" #skill placeholder="Enter your Skill">
+
+
+        </div>
+    </form>
+
+
+    <li *ngFor="let skill of skills; "> {{skill}} <button (click)="remove(skill)">  X</button></li>
+
+
+
+</body>
+
+</html>
